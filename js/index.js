@@ -56,4 +56,10 @@ window.onresize = () => {
     h2Header.textContent = window.innerWidth;
 }
 
-// #8 
+// #8 CHANGE BG COLOR OF BTN
+const textCards = document.querySelectorAll('.destination');
+const textCardBtns = document.querySelectorAll('.destination > .btn');
+
+let getTextCards = textCardBtns.forEach(index => index.addEventListener('click', btnClick = function() {
+    index.style.backgroundColor = "pink";
+}));
