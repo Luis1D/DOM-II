@@ -1,5 +1,5 @@
 
-//#1 NAV
+//#1 NAV ITEMS BORDER BOTTOM ON MOUSEOVER
 const navItemArray = document.querySelectorAll('.nav > .nav-link');
 let getNavItems = navItemArray.forEach(index => index.addEventListener('mouseover', navClick = function() {
     index.style.borderBottom = "2px solid #000";
@@ -17,7 +17,7 @@ header.addEventListener('click', titleMove = function() {
 let last_known_scroll_position = 0;
 window.addEventListener('scroll', function(event) {
     last_known_scroll_position = window.scrollY;
-    header.style.height = "5rem";
+    header.style.boxShadow = "0 .2rem 1rem 1rem rgba(0,0,0,.4)";
 })
 
 // #4 NIGHT MODE
@@ -38,8 +38,13 @@ nightBtn.addEventListener('click', nightMode = function() {
 });
 
 // #5 ON LOAD GREET USER
+const headerImg = document.querySelector('.intro > img');
+
 window.onload = (event) => {
-//   alert('Welcome to Fun Bus');
+ headerImg.style.transform = "rotate(360deg)";
+ headerImg.style.transition = "3s ease";
+ console.log(headerImg);
+ 
 };
 
 // #6 SHRINK IMGS ON DOUBLE CLICK
@@ -63,3 +68,10 @@ const textCardBtns = document.querySelectorAll('.destination > .btn');
 let getTextCards = textCardBtns.forEach(index => index.addEventListener('click', btnClick = function() {
     index.style.backgroundColor = "pink";
 }));
+
+// #9 BOX SHADOW ON IMGS
+let imgShadow = imgs.forEach(index => index.addEventListener('mouseover', shadow = function() {
+    index.style.boxShadow = "0 1rem 1rem .5rem rgba(0,0,0,.4)";
+}));
+
+// #10 
