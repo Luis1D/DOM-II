@@ -350,3 +350,14 @@ img {
   background: #FFFFFF;
   color: #17A2B8;
 }
+.night-mode {
+  width: 15rem;
+  height: 4rem;
+  border: none;
+  background-color: #212529;
+  color: #FFFFFF;
+  margin-left: 1rem;
+  font-size: 1.4rem;
+  outline: none;
+  cursor: pointer;
+}
